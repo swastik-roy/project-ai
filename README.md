@@ -23,7 +23,7 @@ Built a web application using Angular framework for displaying list of resources
 Angular<br/>
 AWS<br/>
 Python<br/>
-JS
+TS
 
 # Project
 
