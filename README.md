@@ -1,3 +1,22 @@
+# AI-Technothon
+
+## Team 72 
+
+Atishay Jain(Captain)<br/>
+Swastik Roy <br/>
+Akshat Choudhary <br/>
+
+## Problem Statement 12
+
+Develop a comprehensive resource tracking solution that provides quick access and listing of all the resources across multiple Google Cloud Platform (GCP) accounts and regions. Extend the solution to support multiple Amazon Web Services (AWS) accounts, enabling users to retrieve consolidated resource information from both cloud providers. The objective is to empower users to efficiently track and manage resources across GCP and AWS, regardless of the account or region.
+
+## Implementation
+
+Implemented a solution that displays list of all the tagged resources in AWS account.<br/>
+Created a web API with an HTTP endpoint for Lambda function that return list of resources by using Amazon API Gateway.<br/>
+Built a web application using Angular framework for displaying list of resources.<br/>
+
+
 # Project
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
