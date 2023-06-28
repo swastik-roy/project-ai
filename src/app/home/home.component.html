@@ -1,0 +1,90 @@
+<!-- Image and text -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://seeklogo.com/images/P/persistent-systems-logo-6DDF70EF79-seeklogo.com.png"
+          class="me-2"
+          height="60"
+          alt=""
+          loading="lazy"
+        />
+        <small>AI Technothon</small>
+      </a>
+      <div class="ms-auto">
+        <button class="btn btn-danger" (click)="logout()">Logout
+          <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 12L13 12" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 15L20.913 12.087V12.087C20.961 12.039 20.961 11.961 20.913 11.913V11.913L18 9" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 5V4.5V4.5C16 3.67157 15.3284 3 14.5 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H14.5C15.3284 21 16 20.3284 16 19.5V19.5V19" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- table -->
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>AWS Resources</h1>
+      </div>
+      <div class="col-lg-6 mt-3 mt-lg-2">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="searchTerm"
+            (input)="search()"
+            placeholder="Search"
+          />
+          <div class="input-group-append ml-2">
+            <button class="btn btn-danger" type="button" (click)="clear()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="1">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Resource ARN</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="1">
+        <tbody>
+          <tr *ngFor="let item of responseData; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.ResourceARN }}</td>
+            <td>
+              <ul class="no-dots">
+                <li *ngFor="let tag of item.Tags">
+                  Key: {{ tag.Key }}, Value: {{ tag.Value }}
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+<div class="container containerdiv">
+    <form [formGroup]="signup" >
+      <div class="formdiv">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Login</h2>
+          </div>
+          <div class="col-lg-12 set-margin">
+            <div class="form-group">
+                <label>Username</label>
+                <input
+                  type="text"
+                  formControlName="user"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': signup.get('user')?.touched && f['user'].errors }"
+                />
+                <div *ngIf=" signup.get('user')?.touched && f['user'].errors" class="invalid-feedback">
+                  <div *ngIf="f['user'].errors['required']">Username is required</div>
+                  <div *ngIf="f['user'].errors['minlength']">
+                    Username must be at least 8 characters
+                  </div>
+                  <div *ngIf="f['user'].errors['maxlength']">
+                    Username must not exceed 20 characters
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-12 set-margin">
+            <div class="form-group">
+                <label>Password</label>
+            <input
+          type="password"
+          formControlName="password"
+          class="form-control"
+          [ngClass]="{ 'is-invalid': signup.get('password')?.touched && f['password'].errors }"
+        />
+        <div *ngIf=" signup.get('password')?.touched && f['password'].errors" class="invalid-feedback">
+          <div *ngIf="f['password'].errors['required']">Password is required</div>
+          <div *ngIf="f['password'].errors['minlength']">
+            Password must be at least 6 characters
+          </div>
+          <div *ngIf="f['password'].errors['maxlength']">
+            Username must not exceed 40 characters
+          </div>
+        </div>
+          </div>
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="height: 100px"
+            >
+              <button class="btn gradient-custom" (click)="save()">
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div> 
+ 
