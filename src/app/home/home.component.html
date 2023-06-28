@@ -1,0 +1,64 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>AWS Resources</h1>
+      </div>
+      <div class="col-lg-6 mt-3 mt-lg-2">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="searchTerm"
+            (input)="search()"
+            placeholder="Search"
+          />
+          <div class="input-group-append ml-2">
+            <button class="btn btn-danger" type="button" (click)="clear()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="1">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Resource ARN</th>
+            <th>Tags</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="1">
+        <tbody>
+          <tr *ngFor="let item of responseData; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.ResourceARN }}</td>
+            <td>
+              <ul class="no-dots">
+                <li *ngFor="let tag of item.Tags">
+                  Key: {{ tag.Key }}, Value: {{ tag.Value }}
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

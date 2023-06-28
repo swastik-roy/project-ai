@@ -1,0 +1,68 @@
+[
+    {
+      "ResourceARN": "arn:aws:s3:::dashing",
+      "Tags": [
+        {
+          "Key": "dev",
+          "Value": "dev"
+        },
+        {
+            "Key": "wervw",
+            "Value": "wevfwers"  
+        },
+        {
+            "Key": "wervw",
+            "Value": "wevfwers"  
+        }
+      ]
+    },
+    {
+        "ResourceARN": "arn:aws:s3:::dashing2",
+        "Tags": [
+          {
+            "Key": "dev2",
+            "Value": "dev2"
+          }
+        ]
+      },
+      {
+        "ResourceARN": "arn:aws:s3:::dashing3",
+        "Tags": [
+          {
+            "Key": "dev3",
+            "Value": "dev3"
+          },
+          {
+            "Key": "wervw",
+            "Value": "wevfwers"  
+        }
+        ]
+      },
+      {
+        "ResourceARN": "arn:aws:s3:::dashing4",
+        "Tags": [
+          {
+            "Key": "dev4",
+            "Value": "dev4"
+          }
+        ]
+      },
+      {
+        "ResourceARN": "arn:aws:s3:::dashing5",
+        "Tags": [
+          {
+            "Key": "dev5",
+            "Value": "dev5"
+          }
+        ]
+      },
+      {
+        "ResourceARN": "arn:aws:s3:::dashing6",
+        "Tags": [
+          {
+            "Key": "dev6",
+            "Value": "dev6"
+          }
+        ]
+      }
+  ]

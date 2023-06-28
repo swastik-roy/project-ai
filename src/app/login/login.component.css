@@ -1,0 +1,28 @@
+.containerdiv{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.formdiv{
+    margin-top:15%;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 173px;
+    padding-right: 212px;
+    box-shadow: 10px 10px 8px black;
+}
+
+.set-margin{
+    margin-top:10px;
+}
+
+.set-margin-submit{
+    margin-top:30px;
+}
+.gradient-custom {
+    background: orangered;
+    background: -webkit-linear-gradient(to right, rgba(241, 115, 42, 0.5), rgba(118, 75, 162, 0.5));
+    background: linear-gradient(to right, rgba(243, 62, 38, 0.5), rgba(118, 75, 162, 0.5))
+  }
